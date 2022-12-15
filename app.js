@@ -11,8 +11,8 @@ const catalogRouter = require("./routes/catalog"); //Import routes for "catalog"
 var app = express();
 // Set up mongoose connection
 const mongoose = require("mongoose");
-mongoose.set('strictQuery', false);
-const mongoDB = "mongodb://localhost:27017/?readPreference=primary&ssl=false&directConnection=true";
+mongoose.set('strictQuery', true);
+const mongoDB = "mongodb://localhost:27017/local_library";
 mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true });
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "MongoDB connection error:"));

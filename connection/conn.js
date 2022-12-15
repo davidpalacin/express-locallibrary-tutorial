@@ -2,7 +2,7 @@
 const mongoose = require("mongoose");
 
 // Set up default mongoose connection
-const mongoDB = "mongodb://127.0.0.1/my_database";
+const mongoDB = "mongodb://127.0.0.1/local_library";
 mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true });
 
 // Get the default connection
